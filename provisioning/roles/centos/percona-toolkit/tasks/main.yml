@@ -1,0 +1,7 @@
+- name: Configure percona official repository
+  yum:
+    name: https://repo.percona.com/yum/percona-release-latest.noarch.rpm
+
+- name: Install percona-toolkit
+  package:
+    name: percona-toolkit

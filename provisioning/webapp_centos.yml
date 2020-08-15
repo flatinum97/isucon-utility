@@ -1,0 +1,6 @@
+- import_playbook: webapp.yml
+
+- hosts: webapp_centos
+  become: yes
+  roles:
+    - centos/percona-toolkit

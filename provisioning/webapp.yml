@@ -1,3 +1,5 @@
 - hosts: webapp
+  become: yes
   roles:
+    - generic/base
     - generic/alp
