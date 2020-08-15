@@ -1,0 +1,16 @@
+- name: Install unzip
+  package:
+    name: unzip
+
+- name: Download alp
+  unarchive:
+    src: "https://github.com/tkuchiki/alp/releases/download/v{{ alp_version }}/alp_linux_amd64.zip"
+    dest: /tmp
+    remote_src: yes
+
+- name: Install alp
+  copy:
+    src: /tmp/alp
+    dest: /usr/local/bin
+    remote_src: yes
+    mode: 755
